@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8324BD7287EF0F0001F8BE3 /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8324BD6287EF0F0001F8BE3 /* Concentration.swift */; };
+		F8324BD9287EF1A4001F8BE3 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8324BD8287EF1A4001F8BE3 /* Cart.swift */; };
 		F8ED3E0A287DE16A00EC518F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED3E09287DE16A00EC518F /* AppDelegate.swift */; };
 		F8ED3E0C287DE16A00EC518F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED3E0B287DE16A00EC518F /* SceneDelegate.swift */; };
 		F8ED3E0E287DE16A00EC518F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED3E0D287DE16A00EC518F /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F8324BD6287EF0F0001F8BE3 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
+		F8324BD8287EF1A4001F8BE3 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		F8ED3E06287DE16A00EC518F /* ConcentrationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcentrationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8ED3E09287DE16A00EC518F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8ED3E0B287DE16A00EC518F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 		F8ED3E1E287DE1B000EC518F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F8324BD6287EF0F0001F8BE3 /* Concentration.swift */,
+				F8324BD8287EF1A4001F8BE3 /* Cart.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,6 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8ED3E0E287DE16A00EC518F /* ViewController.swift in Sources */,
+				F8324BD7287EF0F0001F8BE3 /* Concentration.swift in Sources */,
+				F8324BD9287EF1A4001F8BE3 /* Cart.swift in Sources */,
 				F8ED3E0A287DE16A00EC518F /* AppDelegate.swift in Sources */,
 				F8ED3E0C287DE16A00EC518F /* SceneDelegate.swift in Sources */,
 			);
