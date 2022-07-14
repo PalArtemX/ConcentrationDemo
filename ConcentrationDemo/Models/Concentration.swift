@@ -8,9 +8,28 @@
 import Foundation
 
 
-class Concentration {
+struct Concentration {
     var cards: [Card] = []
-    var indexOfOneAndOnlyFaceUpCard: Int?
+    var indexOfOneAndOnlyFaceUpCard: Int? {
+        get {
+            var foundIndex: Int?
+            for index in cards.indices {
+                if cards[index].isFaceUp {
+                    if foundIndex == nil {
+                        foundIndex = index
+                    } else {
+                        return nil
+                    }
+                }
+            }
+            return foundIndex
+        }
+        set {
+            for index in cards.indices {
+                cards[index].isFaceUp = (index == newValue)
+            }
+        }
+    }
     
     
     init(numberOfPairCards: Int) {
@@ -19,7 +38,7 @@ class Concentration {
     
     
     
-    func chooseCard(at index: Int) {
+    mutating func chooseCard(at index: Int) {
         if !cards[index].isMatched {
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
                 if cards[matchIndex].id == cards[index].id {
@@ -27,24 +46,20 @@ class Concentration {
                     cards[index].isMatched = true
                 }
                 cards[index].isFaceUp = true
-                indexOfOneAndOnlyFaceUpCard = nil
             } else {
-                for flipDownIndex in cards.indices {
-                    cards[flipDownIndex].isFaceUp = false
-                }
-                cards[index].isFaceUp = true
                 indexOfOneAndOnlyFaceUpCard = index
             }
         }
     }
     
-    private func initNumberOfPairCards(at numberOfPairCards: Int) {
+    private mutating func initNumberOfPairCards(at numberOfPairCards: Int) {
         for index in 1...numberOfPairCards {
             let card = Card(id: index - 1)
             print(card)
             cards.append(card)
             cards.append(card)
         }
+        cards = cards.shuffled()
     }
     
 }
